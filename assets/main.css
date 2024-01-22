@@ -1,0 +1,267 @@
+/* main.css */
+
+/* These are the colors and fonts used throughout the webpage.
+ * I've listed them here so that a user may easily
+ * do a search-and-replace for these to change the site theme.
+ *   'Roboto',sans-serif; Font for the title text
+ *   'Roboto-Slab',serif; Font for the body text
+ *   #fafafa; Background color of the site
+ *   #505050; Foreground (text) color of the site
+ *   #52739e; Navy, "Template" in the logo, current page in navigation, special titles in the Program
+ *   #b2132e; Reddish, "Conference" in the logo, hover color for links
+ *   #813c54; Heading color, titles in the Program
+ *   #b8860b; Dark Goldenrod, color for links
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab');
+
+*{
+    border:0;
+    font:inherit;
+    font-size:1em;
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+}
+
+body{
+    background-color: #fafafa;
+    background-size: fill;
+    background-attachment: fixed;
+    color: #505050;
+    text-align:left;
+    font-family:'Roboto',sans-serif;
+    font-size:1em;
+    /*line-height:1.5em;*/
+    padding-top: 50px;
+}
+
+/*.banner {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    height: 250px;
+}
+*/
+
+.head img {
+    max-height: 150px;
+    object-fit: fill;
+}
+
+.banners {
+    position: relative;
+    background: #fafafa;
+}
+
+.banners img {
+    position: relative;
+    object-fit: fill;
+ /*   max-height: 360px;*/
+}
+
+.slide {
+    display: none;
+    position: relative;
+}
+
+a.prev, a.next {
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: dimgray;
+  font-weight: bold;
+  font-size: 36px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  display: inline-block;
+}
+
+a.next {
+  right: 10px;
+  border-radius: 3px 0 0 3px;
+}
+
+a.prev {
+  left: 10px;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.main {
+    position: relative;
+    padding-top: 35px;
+}
+
+.sidebar{
+    position: relative;
+    padding-top: 20px;
+    text-align: center;
+    font-size:30px;
+}
+
+
+a{color: #b8860b; text-decoration:none;}
+a.current{color: #52739e;}
+a.current:hover{color: #e82945;}
+a:hover{color: #b2132e;}
+a:active{color: #e82945;}
+h1,h2,h3,h4,h5{clear:left; color: #06AEF4; margin:1.5em 0em 1em 0em; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0;}
+h1{font-size:2.67em;}
+h2{font-size:2.00em;}
+h3{font-size:1.67em;}
+h4{font-size:1.33em;}
+h5{font-size:1.0em;}
+p{list-style:none; margin:24px auto 24px auto; padding:0px; width:900px; text-align:left;}
+li a, p a {text-decoration:underline; text-decoration-color:#b8860b;}
+ul{list-style:none; margin:24px auto 24px auto; padding:0px; width:800px; text-align:left;}
+ul li{list-style:none; margin:0px auto 0px auto; padding:0px; text-align:left;}
+i,em{font-style:italic;}
+b,strong{font-weight:bold;}
+sup{
+    vertical-align: super;
+    font-size: 0.8em;
+    line-height: 0;
+}
+sub{
+    vertical-align: sub;
+    font-size: 0.8em;
+    line-height: 0;
+}
+table{
+    margin: 12px auto 24px auto;
+    float: center;
+    /* UNCOMMENT THIS FOR DEBUGGING THE ALIGNMENT */
+    /*border: 1px solid black;*/
+}
+th,td{
+    text-align: left;
+    /* UNCOMMENT THIS FOR DEBUGGING THE ALIGNMENT */
+    /*border: 1px solid black;*/
+}
+
+#menu-outer {
+	height: 84px;
+	background: url(images/bar-bg.jpg) repeat-x;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+
+ul#horizontal-list li {
+		display: inline;
+	}
+
+
+  .sidenav {
+    /*width: 160px; *//* Set the width of the sidebar */
+    position: relative; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+
+  /* The navigation menu links */
+  .sidenav a {
+    height: 100%;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+/* Website Banner */
+.banner {position: relative; font-family:'Roboto Slab',serif;}
+.top-right {font-size:2.33em; color: #000000; background: #fafafa; position: relative; padding: 0 0 0 0;}
+.top-left {font-size:3.33em; color: #fafafa; background: #fafafa; text-align: center; position: relative; padding: 0 0 0 0;}
+.bottom-right {font-size:2.33em; color: #fafafa; line-height: 1.5em; width: auto; height: 100px; padding: 0px 27px 27px 0px; text-align: left; position: absolute; bottom: 0px; left: -150px; text-shadow: 0px 0px 6px #000000;}
+
+/* Conference Title Logo */
+.title1{color: #fafafa; text-shadow: 1px 1px 3px #c0c0c0;}
+.title2{font-size:0.93em; color: #fafafa; text-shadow: 1px 1px 3px #c0c0c0;}
+.year{color: #505050; font-size:0.67em; font-weight: lighter;}
+
+/* Navigation Links (Home, Registration, etc) */
+table.navigation{width:800px;}
+td.navigation{font-size:1.67em; white-space:nowrap; width:20%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
+
+/* Sponsor Images */
+table.sponsors{width:800px;}
+td.sponsor{white-space:nowrap; width:33%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
+td.sponsor img{width: 100%}
+
+/* The Table on the Program Page */
+td.room{padding: 4px 12px 4px 4px; width: 90%; vertical-align:bottom; font-size:1.67em; color: #52739e; height:32px;}
+td.date{white-space:nowrap; width:130px; text-align:right; vertical-align:top; padding:4px 16px 0px 0px;}
+td.title{padding: 4px 12px 4px 4px; width: 90%; vertical-align:top; font-size:1.5em; color: #813c54; height:32px; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0; }
+td.title-special{padding: 4px 12px 4px 4px; width: 90%; vertical-align:top; font-size:1.67em; color: #52739e; height:32px; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0;}
+td.speaker{padding: 4px 12px 4px 4px; font-style: italic; font-size:1em; max-height:999999px}
+td.abstract{padding: 4px 12px 12px 4px; font-size:1em; max-height:999999px}
+td.abstract img{display: block; margin: 4px auto 8px auto}
+table.plenary{padding-top: 8px; background: #ffffff;}
+
+/* Registration and Directions iframes and Images */
+iframe.registration{display:block; margin:1em auto 2em auto; width:700px; height:1400px; border:none;}
+iframe.directions{display:block; margin:1em auto 2em auto; width:800px; height:400px; border:none;}
+img.center{display:block; width:67%; margin:1em auto 2em auto;}
+
+/* Flyer Images */
+table.flyers{width:800px;}
+td.flyer{white-space:nowrap; width:50%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
+td.sponsor img{width: 100%}
+ul.space_list li { margin-bottom: 1em; margin-left: -1em; margin-right: -2em; line-height: 25px;}
+/* The Footer */
+table.footer{font-size:0.875em; margin: 72px auto 12px auto; width:333px;}
+td.footer{width:auto; text-align:center; vertical-align:middle;}
+
+/* My hacky way of making the site mobile-friendly */
+@media only screen and (max-width: 1100px) {
+    h2{font-size:3.00em;}
+    p{font-size:1.5em; line-height:1.5em;}
+    th,td,tr{font-size:1.5em; line-height:1.5em;}
+    td.date{font-size:1em; padding-top:0.5em;}
+    td.navigation{font-size:1.5em; padding:0px 20px 0px 20px;}
+    table.footer{font-size:0.33em;}
+}

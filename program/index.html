@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <base href=".">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
+    <meta name="description" content="Conference Template">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta name="KeyWords" content="Conference">
+    <title>CPS-IoT Week 2022</title>
+    <script type="text/javascript">
+        var slideIndex = 0
+        var auto = true
+        var timer
+        function showSlides() {
+            // if (typeof showSlides.idx == 'undefined') {
+            //     showSlides.idx = 0;
+            // }
+            if (auto == false) {
+                clearTimeout(timer)
+                auto = true
+            }
+
+
+            var slides = document.getElementsByClassName("slide");
+            var dots = document.getElementsByClassName("dot");
+            if (slideIndex > (slides.length - 1)) {
+                slideIndex = 0
+            }
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1
+            }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex].style.display = "inline-block";
+            dots[slideIndex].className += " active"
+            slideIndex++;
+            timer = setTimeout(showSlides, 12000);
+        }
+
+        function plusSlides(n) {
+          slideIndex += n - 1
+          auto = false
+          showSlides()
+        }
+
+        function currentSlide(n) {
+            slideIndex = n
+            auto = false
+            showSlides()
+        }
+        function init() {
+            showSlides()
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body onload="init()">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Page content -->
+<!-- <div class="main">
+  ...
+</div> -->
+    <div class="container">
+        <div class="head row text-center" style="background: #fafafa">
+            <div class="col-lg-2">
+                <img src="assets/logo.PNG" alt="Conference Template Banner" class="img-fluid" max-height="120px">
+            </div>
+            <div class="col-lg-10 pt-3">
+                <div class="top-right">
+                  The 2<sup>nd</sup> Student Design Competition on Networked Computing on the Edge
+                </div>
+            </div>
+        </div>
+
+
+        <div class="banners row mt-3 p-0 text-center">
+            <div class="slide">
+                <img src="./assets/slide1.PNG" class="img-fluid w-100">
+            </div>
+            <div class="slide">
+                <img src="./assets/price1.PNG" class="img-fluid w-100">
+            </div>
+            <div class="slide">
+                <img src="./assets/price2.PNG" class="img-fluid w-100">
+            </div>
+            <div class="slide">
+                <img src="./assets/price3.PNG" class="img-fluid w-100">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(0)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+            <table class="navigation">
+                <tr>
+                    <td class="navigation">
+                        <a class="current" title="Conference Home Page" href="./index.html">Home</a>
+                    </td>
+
+                    <td class="navigation">
+                        <a title="Conference Program" href="./program_index.html">Program</a>
+                    </td>
+                </tr>
+            </table>
+    <h2>Competition Agenda  (05/18/2021 09:00am - 12:15pm CDT)</h2>
+    <h2>Virtual Location: <a href="https://acm-org.zoom.us/j/97669165919">acm-org.zoom.us/j/97669165919</a></h2>
+
+    <table>
+        <tr>
+            <td class="date" rowspan="2">
+                9:00am-9:10am
+            </td>
+            <td class="title-special">
+                Welcome
+            </td>
+        </tr>
+    </table>
+
+    <!-- <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                9:10am-9:25am
+            </td>
+            <td class="title">
+              Mixed Reality in UAVs, An Edge Computing Approach
+
+
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+              Gabriel Alexis Guijarro Reyes, Diego Chavez, Luis Rodolfo Garcia
+              Carrillo
+            </td>
+        </tr>
+    </table> -->
+
+    <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                9:10am-9:25am
+            </td>
+            <td class="title">
+              UAV Online Trajectory Planning System based on Air Edge
+Computing Platform
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+              Weijie Dai, Siyu Luo, Haoyun Zhang, Shaoxia He, Jienan Chen
+            </td>
+        </tr>
+    </table>
+
+    <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                9:25am-9:40am
+            </td>
+            <td class="title">
+                A Smart UAV System for Search and Rescue
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+              Dong Wang, Daniel E. Alfaro Rizek, Kendrick G. Morales Ortiz,
+Daniel J. Martínez Arce, Kejie Lu
+            </td>
+        </tr>
+    </table>
+
+    <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                9:40am-9:55am
+            </td>
+            <td class="title">
+                Cooperative Control and Intelligent Decision Experiment Platform for Heterogeneous UAV-UGV Swarm System
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+Siquan Zhou, Peixuan Shu, Zhexin Shi, Xiwang Dong, Yongzhao Hua
+            </td>
+        </tr>
+    </table>
+
+
+
+    <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                9:55am-10:10am
+            </td>
+            <td class="title">
+                Networked UAV-based System for Early Fire Detection
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Tomasz Lewicki, Francesco Vescio, Ruihua Cai, Kaikai Liu
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td class="date" rowspan="2">
+                10:10am - 10:25am
+            </td>
+            <td class="title-special">
+                Break
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                <!-- Kept for Spacing -->
+            </td>
+        </tr>
+    </table>
+
+    <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                10:25am-10:40am
+            </td>
+            <td class="title">
+              Autonomic Vehicle Vision-only Localization based on Memory
+Segment Matching Network
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Shenglong Bai, Yuxi Liu, Cong Zhang, Jinting Luo, Jienan Chen
+            </td>
+        </tr>
+    </table>
+
+
+    <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                10:40am-10:55am
+            </td>
+            <td class="title">
+              Raw Data Level of Cooperative Perception and Autonomous
+Vehicles
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Dominic Carrillo, Deyuan Qu, Sudip Dhakal, Sihai Tang, Qing Yang
+            </td>
+        </tr>
+    </table>
+
+    <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                10:55am-11:10am
+            </td>
+            <td class="title">
+                NeuraLane.AI
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Sanket Lokhande, Ian Lau, Hao Xu
+            </td>
+        </tr>
+    </table>
+
+
+    <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                11:10am-11:25am
+            </td>
+            <td class="title">
+                One Program to Rule the Intersection
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+              Reese Grimsley, Edward Andert, Ian McCormack, Eve Hu, Bob
+Iannucci
+            </td>
+        </tr>
+    </table>
+
+    <!-- <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                11:40am-11:55am
+            </td>
+            <td class="title">
+              Edge-Computing-Based Cooperative Highway Operations
+(ECHO) Frameworks for Automated Vehicles of Different
+Cooperation Classes at Stop-Controlled and Signalized
+Intersections
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+              Saeid Soleimaniamiri, Handong Yao, Xiaopeng Li
+            </td>
+        </tr>
+    </table> -->
+
+    <table>
+        <tr>
+            <td class="date" rowspan="2">
+                11:25am - 11:40am
+            </td>
+            <td class="title-special">
+                Break
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                <!-- Kept for Spacing -->
+            </td>
+        </tr>
+    </table>
+
+    <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                11:40am-11:55am
+            </td>
+            <td class="title">
+                Video Transmission through Underwater Acoustic Channels
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Xiyuan Zhu, Andrew Charway, Rosa Zheng
+            </td>
+        </tr>
+    </table>
+    <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                11:55am-12:10pm
+            </td>
+            <td class="title">
+              Robust Collaborative Distributed Training on Edge Devices
+  with Automatic Hyper-parameter Adjusting
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+              Jiashen Cao, Ruobing Han, Gaurav Rajendra Sangle, Hyesoon Kim
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="date" rowspan="2">
+                12:10pm - 12:15pm
+            </td>
+            <td class="title-special">
+                Closing
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                <!-- Kept for Spacing -->
+            </td>
+        </tr>
+    </table>
+    <!-- <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                12:40pm-12:55pm
+            </td>
+            <td class="title">
+              An Embedded Platform for Systematic Exploration of Vehicular
+              Sensor Attacks
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+              Md. Rafiul Kabir, Neha Mishra, Bhagawat Baanav Yedla Ravi, and
+Sandip Ray
+            </td>
+        </tr>
+    </table> -->
+
+    <!-- <table class="footer">
+        <tr>
+            <td class="footer">Design by <a target="_blank" href="http://math.ucr.edu/~mpierce/">Mike Pierce</a></td>
+            <td class="footer">&copy; Conference Organizers</td>
+        </tr>
+    </table> -->
+
+</body>
+
+</html>
